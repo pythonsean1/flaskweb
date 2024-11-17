@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <form action="{{url_for('about')}}"method = 'POST'>
+        <h1>Please complete the form</h1>
+        {% if not username%}
+            <p>No age provided. Please enter yuor name</p>
+        {% endif %}
+        {% if not age %}
+            <p>No age provided. Please enter your age</p>
+        {% endif %}
+        <Input name ='username' type="text" placeholder="Enter your name...">
+        <Input name="age" type="number" placeholder="Enter your age...">
+            <button type="submit">Submit Form</button>
+
+    <form>
+{% endblock %}
+
+
+
+
+
